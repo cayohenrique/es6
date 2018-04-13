@@ -1,9 +1,13 @@
 import {Car} from './classes/car.js';
 import {Drone} from './classes/drone.js';
+import {fleet} from './fleet-data.js';
+import {FleetDataService} from './services/fleet-data-service.js';
 
+let dataService = new FleetDataService();
+dataService.loadData(fleet);
+//let car = dataService.getCarByLicense('AT9990');
 
-let c = new Car();
-let d = new Drone();
+//let cars = dataService.getCarSortedByLicense();
 
-console.log(c);
-console.log(d);
+let cars = dataService.filterCarsByMake('s');
+console.log(cars);
