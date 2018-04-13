@@ -1,1 +1,1 @@
-es6
+Examples of ES6
